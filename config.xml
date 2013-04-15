@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets"
+        xmlns:rim="http://www.blackberry.com/ns/widgets"
+        version="2.0" rim:header="RIM-Widget: rim/widget">
+
+    <author href="http://sapdev.olympe.com"
+            rim:copyright="Copyright 2012-2013 RGI Corp">RGI
+    </author>
+
+    <name>BBuTrr Application</name>
+    <description>SG Transport mobile tool.</description>
+
+    <content src="index.html"/>
+    <icon src="/resources/icons/icone.png"/>
+    <feature id="blackberry.ui.dialog" required="true"/>
+    <feature id="blackberry.app" required="true"/>
+    <feature id="blackberry.app.event" required="true"/>
+    <feature id="blackberry.identity" required="true"/>
+    <feature id="blackberry.push" required="true"/>
+    <feature id="blackberry.system" required="true"/>
+    <feature id="blackberry.system.event" required="true"/>
+    <feature id="blackberry.utils" required="true"/>
+    <access subdomains="true" uri="http://code.jquery.com"/>
+    <access uri="*" subdomains="true"></access>
+    <rim:orientation mode="auto"/>
+    <rim:navigation mode="focus"/>
+    <rim:connection timeout="25000">
+        <id>TCP_WIFI</id>
+        <id>MDS</id>
+        <id>BIS-B</id>
+        <id>TCP_CELLULAR</id>
+        <id>WAP2</id>
+        <id>WAP</id>
+    </rim:connection>
+
+    <license>
+        Copyright (c) 2013 RGI Corp.
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+        EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+        MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+        NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS
+        BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN
+        ACTION OF CONTRACT, INSULT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+        CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+    </license>
+
+</widget>
