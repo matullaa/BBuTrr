@@ -23,7 +23,7 @@ Ext.define('BBuTrr.viewport.Blackberry', {
                 height = 533;
             }
             else if (useragent.indexOf("berry 99") != -1) { // Bold 9900/9930                
-                height = 267;
+                height = 287;
                 //height = 317;
             }
             console.log("height", height, "useragent", useragent);
