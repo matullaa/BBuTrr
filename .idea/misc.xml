@@ -3,7 +3,6 @@
   <component name="ProjectResources">
     <resource url="http://www.blackberry.com/ns/widgets" location="$APPLICATION_HOME_DIR$/lib/webide.jar" />
     <resource url="http://www.w3.org/ns/widgets" location="$APPLICATION_HOME_DIR$/lib/webide.jar" />
-    <default-html-doctype>jar:file:\C:\Program Files\JetBrains\PhpStorm 5.0.4\lib\webide.jar!\resources\html5-schema\html5.rnc</default-html-doctype>
   </component>
   <component name="ProjectRootManager" version="2" />
 </project>

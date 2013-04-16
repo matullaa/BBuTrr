@@ -1,12 +1,12 @@
 Ext.define('BBuTrr.viewport.Blackberry', {
-    extend:'Ext.viewport.Default',
-    constructor:function (config) {
+    extend: 'Ext.viewport.Default',
+    constructor: function (config) {
         // Blackberry does not like height: 100%                   
         this.superclass.config.height = this.getWindowHeight() + 'px';
         this.callParent([config]);
         return this;
     },
-    getWindowHeight:function () {
+    getWindowHeight: function () {
         /* blackberry variable is defined if we are in a webworks project */
         var height = window.innerHeight;
         console.log("height", height, blackberry, "useragent", navigator.useragent);
@@ -23,13 +23,15 @@ Ext.define('BBuTrr.viewport.Blackberry', {
                 height = 533;
             }
             else if (useragent.indexOf("berry 99") != -1) { // Bold 9900/9930                
-                //height = 267;
-                height = 317;
+                height = 267;
+                //height = 317;
             }
-            height = 440;
+            console.log("height", height, "useragent", useragent);
+            //height = 440;
             return height;
         }
-        console.log("height", height, "useragent", useragent);
+
+
         return height;
     }
 
