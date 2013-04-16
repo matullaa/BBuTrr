@@ -11,16 +11,26 @@ Ext.define("BBuTrr.controller.Notes", {
     config:{
         refs:{
             mainList:"main"
+            //notesListContainer:"noteslistcontainer"
         },
         control:{
             mainList:{
-                RefreshTransports:"onRefreshTransports"
+                RefreshTransports:"onRefreshTransports",
+                ValidateTransport:"onValidateTransport"
             }
+//            notesListContainer:{
+//                RefreshTransports:"onRefreshTransports"
+//            }
         }
     },
     onRefreshTransports:function () {
         console.log("onRefreshtransports");
     },
+
+    onValidateTransport:function () {
+        console.log("onValidatetransports");
+    },
+
 
     launch:function () {
         this.callParent(arguments);
@@ -29,6 +39,7 @@ Ext.define("BBuTrr.controller.Notes", {
     },
 
     init:function () {
+        this.callParent(arguments);
         console.log("Init event Controller");
     }
 });

@@ -59,19 +59,17 @@
     <!--<link href="bb6.css" rel="stylesheet" type="text/css"/>-->
     <script type="text/javascript" src="resources/jquery/jquery-1.6.1.min.js"></script>
     <script type="text/javascript" src="resources/actions.js"></script>
-    <script src="sencha-touch-all.js" type="text/javascript"></script>
-    <script src="app.js" type="text/javascript"></script>
+    <script type="text/javascript" src="sencha-touch-all.js"></script>
+    <script type="text/javascript" src="app.js"></script>
     <script type="text/javascript">
         function highlight(e) {
-            //e.setAttribute("className","x-container x-list-item x-stretched x-item-selected");
             e.setAttribute("style", "min-height: 27px !important; -webkit-transform: translate3d(0px, 0px, 0px);background-color: #006bb6;background-image: -webkit-linear-gradient(top, #0398ff, #007ad0 3%, #005c9d);");
-            //e.className = "x-list-item.x-item-selected";
-            console.log("Highlighted!!", e);
+            //console.log("Highlighted!!", e);
         }
 
         function unhighlight(e) {
             e.setAttribute("style", "", e);
-            console.log("Unhighlighted!!");
+            // console.log("Unhighlighted!!");
         }
         $(document).ready(function () {
             //Override specific OS events.

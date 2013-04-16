@@ -7,14 +7,26 @@
  */
 Ext.define("BBuTrr.store.Transports", {
     extend:"Ext.data.Store",
+    requires:"Ext.data.proxy.LocalStorage",
+
     config:{
         model:"BBuTrr.model.TransportModel",
+
+
         data:[
             {trkor:"DI1K900001", astxt:"First TR", sysid:"SPIKE"},
             {trkor:"DI1K900002", astxt:"Second TR", sysid:"SPIKE"},
             {trkor:"DI1K900003", astxt:"Third TR", sysid:"SPIKE"},
             {trkor:"DG2K910003", astxt:"Another TR", sysid:"GLASS"},
-            {trkor:"DI1K900004", astxt:"Fourth TR", sysid:"SPIKE"}
+            {trkor:"DI1K900004", astxt:"Fourth TR", sysid:"SPIKE"},
+            {trkor:"DI1K900014", astxt:"Fourth TR", sysid:"SPIKE"},
+            {trkor:"DI1K900024", astxt:"Fourth TR", sysid:"SPIKE"},
+            {trkor:"DI1K900034", astxt:"Fourth TR", sysid:"SPIKE"},
+            {trkor:"DI1K900044", astxt:"Fourth TR", sysid:"SPIKE"},
+            {trkor:"DI1K900234", astxt:"Fourth TR", sysid:"SPIKE"},
+            {trkor:"DI1K900084", astxt:"Fourth TR", sysid:"SPIKE"},
+            {trkor:"DI1K900064", astxt:"Fourth TR", sysid:"SPIKE"},
+            {trkor:"DI1K900022", astxt:"Fourth TR", sysid:"SPIKE"}
         ],
         sorters:[
             {property:'sysid', direction:'ASC'}

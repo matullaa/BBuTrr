@@ -12,7 +12,8 @@ Ext.define('BBuTrr.view.Main', {
         id:'tab-id',
         tabBarPosition:'bottom',
         layout:{
-            type:'card'
+            type:'card',
+            //animation:'fade'
         },
         translationMethod:'slide',
         listeners:{
@@ -40,7 +41,8 @@ Ext.define('BBuTrr.view.Main', {
 
         var list = {
             xtype:"transportslist",
-            store:'Transports',
+            layout:'fit',
+            store:Ext.getStore("Transports"),
             width:'100%',
             height:'100%',
             listeners:{
@@ -49,7 +51,7 @@ Ext.define('BBuTrr.view.Main', {
         };
 
         var tablist = {
-            xtype:'panel',
+            xtype:'container',
             title:'Transports',
             iconCls:'home',
             scrollable:true,
@@ -66,8 +68,9 @@ Ext.define('BBuTrr.view.Main', {
                 list
             ]
         };
-        //tablist.addItems(list);
+
         var tabParam = {
+            xtype:'container',
             title:'Parameters',
             iconCls:'more',
             scrollable:true,
@@ -87,8 +90,8 @@ Ext.define('BBuTrr.view.Main', {
         this.fireEvent("RefreshTransports", this);
     },
 
-    onTransportListDisclosure:function () {
+    onTransportListDisclose:function (list, record, target, index, evt, options) {
         console.log("validatetransportCommand");
-        this.fireEvent("validatetransportCommand", this, record);
+        this.fireEvent("ValidateTransport", this, record);
     }
 });

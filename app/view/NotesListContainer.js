@@ -12,47 +12,36 @@ Ext.define("BBuTrr.view.NotesListContainer", {
     initialize:function () {
         this.callParent(arguments);
 
-//        var refButton = {
-//            xtype:"button",
-//            text:"Refresh",
-//            ui:"action",
-//            handler:this.onRefreshButtonTap,
-//            scope:this
-//        };
-//
-//        var deleteButton = {
-//            xtype:"button",
-//            iconCls:"trash",
-//            iconMask:true,
-//            scope:this
-//        };
-//
-//        var topToolbar = {
-//            xtype:"toolbar",
-//            title:"Saint-Gobain Transport",
-//            docked:"top",
-//            items:[
-//                {xtype:"spacer"},
-//                refButton,
-//            ]
-//        };
+        var refButton = {
+            xtype:"button",
+            text:"Refresh",
+            ui:"action",
+            handler:this.onRefreshButtonTap,
+            scope:this
+        };
 
-//        var bottomToolbar = {
-//            xtype:"toolbar",
-//            docked:"bottom",
-//            items:[
-//                deleteButton
-//            ]
-//        };
+
+        var topToolbar = {
+            xtype:"toolbar",
+            title:"Saint-Gobain Transport",
+            docked:"top",
+            items:[
+                {xtype:"spacer"},
+                refButton,
+            ]
+        };
 
         var transportsList = {
             xtype:"transportslist",
             store:Ext.getStore("Transports"),
             listeners:{
-                disclose:{fn:this.onTransportListDisclose, scope:this}
+                disclose:{fn:this.onTransportListDisclose, scope:this},
+                onload:{fn:this.ontransportlistload, scope:this}
             }
-        }
-        this.add(transportsList);
+        };
+
+        this.add([topToolbar, transportsList]);
+
     },
 
     onRefreshButtonTap:function () {
@@ -65,11 +54,15 @@ Ext.define("BBuTrr.view.NotesListContainer", {
         this.fireEvent("validatetransportCommand", this, record);
     },
 
+    ontransportlistload:function () {
+        console.log("loaded !!");
+        //this.fireEvent("validatetransportCommand", this, record);
+    },
+
     config:{
         layout:{
             type:"fit"
         }
     }
-})
-;
+});
 

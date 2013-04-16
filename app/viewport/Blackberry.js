@@ -9,6 +9,7 @@ Ext.define('BBuTrr.viewport.Blackberry', {
     getWindowHeight:function () {
         /* blackberry variable is defined if we are in a webworks project */
         var height = window.innerHeight;
+        console.log("height", height, blackberry, "useragent", navigator.useragent);
         if (typeof blackberry !== 'undefined') {
             var useragent = navigator.userAgent.toLowerCase();
             var moreHeight = 0;
@@ -22,14 +23,17 @@ Ext.define('BBuTrr.viewport.Blackberry', {
                 height = 533;
             }
             else if (useragent.indexOf("berry 99") != -1) { // Bold 9900/9930                
-                height = 267;
+                //height = 267;
+                height = 317;
             }
+            height = 440;
             return height;
         }
+        console.log("height", height, "useragent", useragent);
         return height;
     }
 
 }, function () {
 
-
+//console.log("height",height,"useragent",useragent);
 });

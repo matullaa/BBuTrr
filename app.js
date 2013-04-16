@@ -16,10 +16,11 @@ Ext.application({
 
     models:['TransportModel'],
     stores:['Transports'],
-    controllers:['Notes'],
-    views:['NotesListContainer',
-        'TransportsList',
-        'Main'],
+    controllers:["Notes"],
+    views:["NotesListContainer",
+        "TransportsList",
+        'Main'
+    ],
     overrides:['LoadMask'],
 
     icon:{
@@ -59,8 +60,8 @@ Ext.application({
 //        var notesListContainer = {
 //            xtype:"noteslistcontainer"
 //        };
-        var mainList = {xtype:"main"}
-        //Ext.Viewport.add(notesListContainer);
+//        Ext.Viewport.add(notesListContainer);
+        var mainList = {xtype:"main"};
         Ext.Viewport.add(mainList);
 
 //        }).delay(5000);
